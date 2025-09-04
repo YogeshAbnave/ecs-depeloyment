@@ -1,0 +1,18 @@
+{
+  "name": "appleremindersapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --env-file=.env --watch src/index.js"
+  },
+  "author": "Lukas",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.14.1",
+    "zod": "^3.24.2"
+  }
+}
