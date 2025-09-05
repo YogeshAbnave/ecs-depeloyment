@@ -1,21 +1,17 @@
-# Base image
-FROM node:22-alpine
+# Use the official Nginx image as base
+FROM nginx:alpine
 
-# Set working directory
-WORKDIR /app
+# Remove default Nginx website
+RUN rm -rf /usr/share/nginx/html/*
 
-# Set environment to production
-ENV NODE_ENV=production
+# Copy our HTML file to the Nginx web directory
+COPY index.html /usr/share/nginx/html/
 
-# Install dependencies
-COPY package*.json ./
-RUN npm install
+# Copy custom Nginx configuration (optional)
+COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copy app files
-COPY . .
+# Expose port 80
+EXPOSE 80
 
-# Expose the app port
-EXPOSE 3001
-
-# Command to run the app
-CMD ["node", "src/index.js"]
+# Start Nginx when the container launches
+CMD ["nginx", "-g", "daemon off;"]
