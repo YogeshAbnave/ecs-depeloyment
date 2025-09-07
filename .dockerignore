@@ -1,28 +1,13 @@
-# Git
 .git
 .gitignore
-
-# Documentation
 README.md
-*.md
-
-# Docker
 Dockerfile
 .dockerignore
-
-# IDE
-.vscode
-.idea
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
+node_modules
+npm-debug.log
+.env
 *.log
-
-# Temporary files
-*.tmp
-*.temp
+.github
+aws/
+build-and-push.sh
+Build and Test Locally.md
