@@ -9,9 +9,7 @@ def main():
         page_icon="👋",
     )
 
-    st.write(
-        "# Welcome to your education portal! Added new chnages in code Cloud Age 👋"
-    )
+    st.write("# Welcome to your education portal! CloudAge Pune Devops team 👋")
 
     st.markdown(
         """

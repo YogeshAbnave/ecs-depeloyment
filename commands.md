@@ -16,3 +16,13 @@ aws ecs wait services-stable --cluster cloudage-cluster --services cloudage-serv
 # Check ALB URL
 Invoke-WebRequest -UseBasicParsing http://cloudage-alb-971379324.us-east-1.elb.amazonaws.com | Select -Expand Content | Out-Host
 ```
+
+Proposed standard structure (non-breaking; migrate over time):
+
+- app/
+  - pages/
+  - components/
+  - assets/
+- infra/
+  - aws/
+- docker/
